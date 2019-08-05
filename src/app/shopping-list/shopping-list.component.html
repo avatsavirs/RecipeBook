@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-10">
+        <app-edit-list></app-edit-list>
+        <hr>
+        <p *ngIf="ingredients.length > 0">The List</p>
+        <ul class="list-group">
+            <a 
+                class="list-group-item" 
+                style="cursor: pointer" 
+                *ngFor="let ingredient of ingredients">
+                {{ ingredient.name }}: {{ ingredient.amount }}
+            </a>
+        </ul>
+    </div>
+</div>
